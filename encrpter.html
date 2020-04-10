@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		Encryptor
+	</title>
+	   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+</head>
+<body>
+	<div class="row">
+	 <div class="col"></div>
+	 <div id="fake">
+	 	<h1>we are not mad!</h1>
+	 	<br>
+	 	<p>HAIL HIEST!
+	 	</p>
+	 </div>
+	 <div class="col own" id="911">
+	 	<style type="text/css">
+	 		#fake{
+	 			display: none;
+	 		}
+	 		.own{
+	 			width: 100%;
+	 			background-color: cyan;
+	 			padding: 20px 20px 20px 20px;
+	 		}
+	 		.size{
+	 			width: 70%;
+	 			margin-left: 15%;
+	 		}
+	 		.mybt{
+	 			margin-left: 40%;
+	 			margin-top: 10px;
+	 		}
+	 		.mybt2{
+	 			margin: 10px;
+	 		}
+
+	 	</style>
+	 	<script type="text/javascript">
+	 		var given= prompt("Enter Password Partner");
+	 		given=given.toUpperCase();
+	 		var res="hello";
+	 	switch(given){
+	 			case "PRERNA":
+                
+	 			
+	 			break;
+	 			case "DIPANSHU":
+	 			
+	 			break;
+	 			default:
+	 			document.getElementById('911').style.display='none';
+	 			document.getElementById('fake').style.display='block';
+	 			
+	 		}
+	
+	 		function enc(){
+	 		var enc= document.getElementById('mytx').value;
+	 		var convert="";
+	 		for(var i=0;i<enc.length;i++)
+	 		{
+	 			var x = enc.charCodeAt(i) + 128;
+	 			convert = convert.concat(String.fromCharCode(x));
+	 		}
+	 		document.getElementById('mytx').value= convert;
+	 	}
+            function dnc()
+            {
+            	var enc= document.getElementById('mytx').value;
+            	var convert="";
+	 		for(var i=0;i<enc.length;i++)
+	 		{
+	 			var x = enc.charCodeAt(i) - 128;
+	 			convert = convert.concat(String.fromCharCode(x));
+	 		}
+	 		document.getElementById('mytx').value= convert;
+            }
+	 	</script>
+	 <h1 id="demo" align="center"> Welcome Partner</h1>
+	 <br>
+	 <p align="center" class="mybt2">ENTER TEXT:</p>
+	 <form>
+	 <input align="center" type="text" name="mytext" id="mytx" class="size">
+	</form>
+	 <br>
+	 <div class="row ">
+	 <button class="btn btn-dark col mybt2" onclick="enc()">Encrypt</button><button class="btn btn-danger col mybt2" onclick="dnc()">Decrypt</button>
+	</div>
+	</div>
+	 <div class="col" ></div>
+	</div>
+
+</body>
+</html>
